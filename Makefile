@@ -9,7 +9,7 @@ blocks.h:
 
 
 clean:
-	rm -f *.o *.gch someblocks
+	rm -f *.o *.gch someblocks blocks.h
 install: output
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	install -m 0755 someblocks $(DESTDIR)$(PREFIX)/bin/someblocks
