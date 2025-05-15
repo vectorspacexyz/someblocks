@@ -18,10 +18,10 @@ if [ -n "$default_interface" ]; then
         wifi_ssid=$(iwgetid -r)
 
         # Format WiFi status with SSID and IP
-        status="${wifi_ssid} (${wifi_strength}) ${ip_address}"
+        status="󰖩 ${wifi_ssid} (${wifi_strength}) ${ip_address}"
     else
         # It's Ethernet or another interface type
-        status="ETHERNET ${ip_address}"
+        status="󰈀 ETHERNET ${ip_address}"
     fi
 fi
 

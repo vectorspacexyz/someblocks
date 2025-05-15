@@ -17,15 +17,15 @@ for battery in /sys/class/power_supply/BAT?*; do
 	# Set colors based on status and capacity
 	if [ "$status" = "DISCHARGING" ] && [ "$capacity" -le 30 ]; then
 		# Red background for discharging and below 30%
-		printf "^bg(FF0000)%s: %d%%^bg()" "$status" "$capacity"
+		printf "^bg(FF0000)󰁹 %s: %d%%^bg()" "$status" "$capacity"
 	elif [ "$status" = "DISCHARGING" ]; then
 		# Yellow background for discharging
-    printf "^fg(FFFF00)%s: %d%%^fg()" "$status" "$capacity"
+    printf "^fg(FFFF00)󰁹 %s: %d%%^fg()" "$status" "$capacity"
 	elif [ "$status" = "CHARGING" ]; then
 		# Blue background for charging (dwm blue)
-		printf "^fg(00FF00)%s: %d%%^fg()" "$status" "$capacity"
+		printf "^fg(00FF00)󰁹 %s: %d%%^fg()" "$status" "$capacity"
 	else
 		# No background color for other states
-		printf "%s: %d%%" "$status" "$capacity"
+		printf "󰁹 %s: %d%%" "$status" "$capacity"
 	fi
 done && printf "\\n"
