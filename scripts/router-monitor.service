@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor IP route changes
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/admin/someblocks/scripts/route-monitor.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
